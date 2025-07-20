@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Previa Completa - Plantillas de Email NexyPass</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .preview-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .preview-header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .preview-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        .preview-subtitle {
+            font-size: 16px;
+            color: #4a5568;
+        }
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .template-preview {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .template-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .template-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .template-description {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .template-content {
+            padding: 20px;
+        }
+        .template-iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 8px;
+            background: #f7fafc;
+        }
+        .template-actions {
+            padding: 20px;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            flex: 1;
+            text-align: center;
+        }
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #5a67d8;
+        }
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        .btn-secondary:hover {
+            background: #cbd5e0;
+        }
+        .config-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .config-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .config-item {
+            background: #f7fafc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .config-name {
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+        .config-subject {
+            color: #4a5568;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .config-file {
+            color: #667eea;
+            font-family: monospace;
+            font-size: 13px;
+        }
+        @media (max-width: 768px) {
+            .preview-container {
+                padding: 10px;
+            }
+            .templates-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <!-- Header -->
+        <div class="preview-header">
+            <h1 class="preview-title">📧 Plantillas de Email Completas - NexyPass</h1>
+            <p class="preview-subtitle">
+                Todas las plantillas de correo personalizadas listas para implementar en Supabase
+            </p>
+        </div>
+
+        <!-- Templates Grid -->
+        <div class="templates-grid">
+            <!-- Confirm Signup -->
+            <div class="template-preview">
+                <div class="template-header">
+                    <div class="template-title">Confirmar Registro</div>
+                    <div class="template-description">Confirm Signup</div>
+                </div>
+                <div class="template-content">
+                    <iframe 
+                        src="verifyEmail.html" 
+                        class="template-iframe"
+                        title="Vista previa del email de verificación">
+                    </iframe>
+                </div>
+                <div class="template-actions">
+                    <a href="verifyEmail.html" target="_blank" class="btn btn-primary">
+                        👁️ Ver Completo
+                    </a>
+                    <a href="#" onclick="copyToClipboard('verifyEmail.html')" class="btn btn-secondary">
+                        📋 Copiar HTML
+                    </a>
+                </div>
+            </div>
+
+            <!-- Invite User -->
+            <div class="template-preview">
+                <div class="template-header">
+                    <div class="template-title">Invitar Usuario</div>
+                    <div class="template-description">Invite User</div>
+                </div>
+                <div class="template-content">
+                    <iframe 
+                        src="inviteUser.html" 
+                        class="template-iframe"
+                        title="Vista previa del email de invitación">
+                    </iframe>
+                </div>
+                <div class="template-actions">
+                    <a href="inviteUser.html" target="_blank" class="btn btn-primary">
+                        👁️ Ver Completo
+                    </a>
+                    <a href="#" onclick="copyToClipboard('inviteUser.html')" class="btn btn-secondary">
+                        📋 Copiar HTML
+                    </a>
+                </div>
+            </div>
+
+            <!-- Magic Link -->
+            <div class="template-preview">
+                <div class="template-header">
+                    <div class="template-title">Enlace Mágico</div>
+                    <div class="template-description">Magic Link</div>
+                </div>
+                <div class="template-content">
+                    <iframe 
+                        src="magicLink.html" 
+                        class="template-iframe"
+                        title="Vista previa del enlace mágico">
+                    </iframe>
+                </div>
+                <div class="template-actions">
+                    <a href="magicLink.html" target="_blank" class="btn btn-primary">
+                        👁️ Ver Completo
+                    </a>
+                    <a href="#" onclick="copyToClipboard('magicLink.html')" class="btn btn-secondary">
+                        📋 Copiar HTML
+                    </a>
+                </div>
+            </div>
+
+            <!-- Change Email -->
+            <div class="template-preview">
+                <div class="template-header">
+                    <div class="template-title">Cambiar Email</div>
+                    <div class="template-description">Change Email</div>
+                </div>
+                <div class="template-content">
+                    <iframe 
+                        src="changeEmail.html" 
+                        class="template-iframe"
+                        title="Vista previa del cambio de email">
+                    </iframe>
+                </div>
+                <div class="template-actions">
+                    <a href="changeEmail.html" target="_blank" class="btn btn-primary">
+                        👁️ Ver Completo
+                    </a>
+                    <a href="#" onclick="copyToClipboard('changeEmail.html')" class="btn btn-secondary">
+                        📋 Copiar HTML
+                    </a>
+                </div>
+            </div>
+
+            <!-- Reset Password -->
+            <div class="template-preview">
+                <div class="template-header">
+                    <div class="template-title">Restablecer Contraseña</div>
+                    <div class="template-description">Reset Password</div>
+                </div>
+                <div class="template-content">
+                    <iframe 
+                        src="resetPassword.html" 
+                        class="template-iframe"
+                        title="Vista previa del restablecimiento de contraseña">
+                    </iframe>
+                </div>
+                <div class="template-actions">
+                    <a href="resetPassword.html" target="_blank" class="btn btn-primary">
+                        👁️ Ver Completo
+                    </a>
+                    <a href="#" onclick="copyToClipboard('resetPassword.html')" class="btn btn-secondary">
+                        📋 Copiar HTML
+                    </a>
+                </div>
+            </div>
+
+            <!-- Reauthenticate -->
+            <div class="template-preview">
+                <div class="template-header">
+                    <div class="template-title">Reautenticación</div>
+                    <div class="template-description">Reauthenticate</div>
+                </div>
+                <div class="template-content">
+                    <iframe 
+                        src="reauthenticate.html" 
+                        class="template-iframe"
+                        title="Vista previa de reautenticación">
+                    </iframe>
+                </div>
+                <div class="template-actions">
+                    <a href="reauthenticate.html" target="_blank" class="btn btn-primary">
+                        👁️ Ver Completo
+                    </a>
+                    <a href="#" onclick="copyToClipboard('reauthenticate.html')" class="btn btn-secondary">
+                        📋 Copiar HTML
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Configuration Guide -->
+        <div class="config-section">
+            <h2 class="config-title">🚀 Configuración para Supabase</h2>
+            <p style="color: #4a5568; margin-bottom: 25px;">
+                Copia estos subjects junto con el HTML de cada plantilla en tu dashboard de Supabase:
+            </p>
+
+            <div class="config-item">
+                <div class="config-name">Confirm Signup</div>
+                <div class="config-subject">Subject: Verifica tu cuenta - NexyPass 🚀</div>
+                <div class="config-file">Archivo: verifyEmail.html</div>
+            </div>
+
+            <div class="config-item">
+                <div class="config-name">Invite User</div>
+                <div class="config-subject">Subject: ¡Has sido invitado a NexyPass! 🎉</div>
+                <div class="config-file">Archivo: inviteUser.html</div>
+            </div>
+
+            <div class="config-item">
+                <div class="config-name">Magic Link</div>
+                <div class="config-subject">Subject: Tu enlace de acceso a NexyPass ✨</div>
+                <div class="config-file">Archivo: magicLink.html</div>
+            </div>
+
+            <div class="config-item">
+                <div class="config-name">Change Email</div>
+                <div class="config-subject">Subject: Confirma tu nuevo email - NexyPass 📧</div>
+                <div class="config-file">Archivo: changeEmail.html</div>
+            </div>
+
+            <div class="config-item">
+                <div class="config-name">Reset Password</div>
+                <div class="config-subject">Subject: Restablece tu contraseña - NexyPass 🔐</div>
+                <div class="config-file">Archivo: resetPassword.html</div>
+            </div>
+
+            <div class="config-item">
+                <div class="config-name">Reauthenticate</div>
+                <div class="config-subject">Subject: Verificación de seguridad requerida - NexyPass 🛡️</div>
+                <div class="config-file">Archivo: reauthenticate.html</div>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="config-section">
+            <h2 class="config-title">🔗 Enlaces Incluidos</h2>
+            <p style="color: #4a5568; margin-bottom: 20px;">
+                Todas las plantillas incluyen estos enlaces de acceso rápido:
+            </p>
+            <ul style="color: #4a5568;">
+                <li><strong>🎯 Ver Ruleta:</strong> https://www.nexypass.site/wheel</li>
+                <li><strong>🛒 Nuestra Tienda:</strong> https://www.nexypass.site</li>
+                <li><strong>📱 WhatsApp Soporte:</strong> +52 9514563572</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        async function copyToClipboard(filename) {
+            try {
+                const response = await fetch(filename);
+                const html = await response.text();
+                await navigator.clipboard.writeText(html);
+                
+                // Show success message
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Copiado!';
+                btn.style.background = '#48bb78';
+                btn.style.color = 'white';
+                
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                    btn.style.color = '';
+                }, 2000);
+            } catch (err) {
+                console.error('Error al copiar:', err);
+                alert('Error al copiar el HTML. Por favor, abre el archivo manualmente.');
+            }
+        }
+
+        // Add some interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to iframes
+            const iframes = document.querySelectorAll('.template-iframe');
+            iframes.forEach(iframe => {
+                iframe.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.02)';
+                    this.style.transition = 'transform 0.2s ease';
+                });
+                
+                iframe.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
