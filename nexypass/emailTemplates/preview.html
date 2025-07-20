@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Previa - Plantillas de Email NexyPass</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .preview-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .preview-header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .preview-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        .preview-subtitle {
+            font-size: 16px;
+            color: #4a5568;
+        }
+        .templates-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .template-preview {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .template-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .template-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .template-description {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .template-content {
+            padding: 20px;
+        }
+        .template-iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 8px;
+            background: #f7fafc;
+        }
+        .template-actions {
+            padding: 20px;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #5a67d8;
+        }
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        .btn-secondary:hover {
+            background: #cbd5e0;
+        }
+        .instructions {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .instructions-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f7fafc;
+            border-radius: 8px;
+        }
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .step-content {
+            flex: 1;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+        .step-description {
+            color: #4a5568;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .templates-grid {
+                grid-template-columns: 1fr;
+            }
+            .preview-container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <!-- Header -->
+        <div class="preview-header">
+            <h1 class="preview-title">📧 Plantillas de Email - NexyPass</h1>
+            <p class="preview-subtitle">
+                Vista previa de las plantillas de correo personalizadas para mejorar la experiencia del usuario
+            </p>
+        </div>
+
+        <!-- Templates Grid -->
+        <div class="templates-grid">
+            <!-- Verification Email -->
+            <div class="template-preview">
+                <div class="template-header">
+                    <div class="template-title">Email de Verificación</div>
+                    <div class="template-description">Enviado al registrarse</div>
+                </div>
+                <div class="template-content">
+                    <iframe 
+                        src="verifyEmail.html" 
+                        class="template-iframe"
+                        title="Vista previa del email de verificación">
+                    </iframe>
+                </div>
+                <div class="template-actions">
+                    <a href="verifyEmail.html" target="_blank" class="btn btn-primary">
+                        👁️ Ver Completo
+                    </a>
+                    <a href="#" onclick="copyToClipboard('verifyEmail.html')" class="btn btn-secondary">
+                        📋 Copiar HTML
+                    </a>
+                </div>
+            </div>
+
+            <!-- Welcome Email -->
+            <div class="template-preview">
+                <div class="template-header">
+                    <div class="template-title">Email de Bienvenida</div>
+                    <div class="template-description">Enviado tras verificación</div>
+                </div>
+                <div class="template-content">
+                    <iframe 
+                        src="welcomeEmail.html" 
+                        class="template-iframe"
+                        title="Vista previa del email de bienvenida">
+                    </iframe>
+                </div>
+                <div class="template-actions">
+                    <a href="welcomeEmail.html" target="_blank" class="btn btn-primary">
+                        👁️ Ver Completo
+                    </a>
+                    <a href="#" onclick="copyToClipboard('welcomeEmail.html')" class="btn btn-secondary">
+                        📋 Copiar HTML
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <h2 class="instructions-title">🚀 Cómo Implementar</h2>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Acceder a Supabase</div>
+                    <div class="step-description">
+                        Inicia sesión en tu dashboard de Supabase y ve a Authentication > Email Templates
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Configurar Email de Verificación</div>
+                    <div class="step-description">
+                        Selecciona "Confirm signup", copia el HTML de verifyEmail.html y pégalo en el template.
+                        Subject: "Verifica tu cuenta - NexyPass 🚀"
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">Probar la Implementación</div>
+                    <div class="step-description">
+                        Registra un usuario de prueba para verificar que el email se envía correctamente con el nuevo diseño
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-title">Email de Bienvenida (Opcional)</div>
+                    <div class="step-description">
+                        Implementa el envío programático del email de bienvenida usando welcomeEmail.html como base
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function copyToClipboard(filename) {
+            try {
+                const response = await fetch(filename);
+                const html = await response.text();
+                await navigator.clipboard.writeText(html);
+                
+                // Show success message
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Copiado!';
+                btn.style.background = '#48bb78';
+                btn.style.color = 'white';
+                
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                    btn.style.color = '';
+                }, 2000);
+            } catch (err) {
+                console.error('Error al copiar:', err);
+                alert('Error al copiar el HTML. Por favor, abre el archivo manualmente.');
+            }
+        }
+
+        // Add some interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to iframes
+            const iframes = document.querySelectorAll('.template-iframe');
+            iframes.forEach(iframe => {
+                iframe.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.02)';
+                    this.style.transition = 'transform 0.2s ease';
+                });
+                
+                iframe.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
