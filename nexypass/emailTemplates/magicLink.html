@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlace de Acceso - NexyPass</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+        .tagline {
+            font-size: 16px;
+            opacity: 0.9;
+            margin: 0;
+        }
+        .magic-icon {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .welcome-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .welcome-text {
+            font-size: 16px;
+            color: #4a5568;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .cta-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            padding: 18px 36px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: transform 0.2s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .security-info {
+            background: #fff5f5;
+            border: 1px solid #fed7d7;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .security-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #c53030;
+            margin-bottom: 10px;
+        }
+        .security-text {
+            font-size: 14px;
+            color: #742a2a;
+        }
+        .quick-access {
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .quick-access-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .quick-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .quick-link {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .fallback-link {
+            background: #edf2f7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .fallback-text {
+            font-size: 14px;
+            color: #718096;
+            margin-bottom: 10px;
+        }
+        .fallback-url {
+            font-size: 12px;
+            color: #4a5568;
+            word-break: break-all;
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+        }
+        .footer {
+            background: #2d3748;
+            color: #a0aec0;
+            padding: 30px;
+            text-align: center;
+        }
+        .footer-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        .footer-text {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .disclaimer {
+            font-size: 12px;
+            color: #718096;
+            margin-top: 20px;
+            line-height: 1.4;
+        }
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                margin: 10px;
+                border-radius: 12px;
+            }
+            .header, .content, .footer {
+                padding: 30px 20px;
+            }
+            .quick-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <div class="logo">NexyPass</div>
+            <p class="tagline">Tu Universo Digital, Simplificado</p>
+            <div class="magic-icon">✨</div>
+        </div>
+
+        <div class="content">
+            <h1 class="welcome-title">Tu Enlace Mágico está Listo 🔗</h1>
+            
+            <p class="welcome-text">
+                Hemos generado un enlace seguro para que puedas acceder a tu cuenta NexyPass 
+                sin necesidad de recordar tu contraseña. ¡Es rápido y seguro!
+            </p>
+
+            <div class="cta-container">
+                <a href="{{ .ConfirmationURL }}" class="cta-button">
+                    🚀 Acceder a NexyPass
+                </a>
+            </div>
+
+            <div class="security-info">
+                <div class="security-title">🔒 Información de Seguridad</div>
+                <div class="security-text">
+                    Este enlace es válido por 1 hora y solo puede usarse una vez por motivos de seguridad.
+                </div>
+            </div>
+
+            <div class="quick-access">
+                <h3 class="quick-access-title">🎯 Acceso Rápido</h3>
+                <p style="text-align: center; color: #4a5568; margin-bottom: 15px;">
+                    Una vez que ingreses, podrás:
+                </p>
+                
+                <div class="quick-links">
+                    <a href="https://www.nexypass.site/wheel" class="quick-link">🎯 Ver Ruleta</a>
+                    <a href="https://www.nexypass.site" class="quick-link">🛒 Nuestra Tienda</a>
+                </div>
+            </div>
+
+            <div class="fallback-link">
+                <p class="fallback-text">
+                    <strong>¿El botón no funciona?</strong><br>
+                    Copia y pega este enlace en tu navegador:
+                </p>
+                <div class="fallback-url">{{ .ConfirmationURL }}</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-title">NexyPass</div>
+            <p class="footer-text">
+                Acceso seguro y rápido a tu universo digital.
+            </p>
+            
+            <div class="disclaimer">
+                Si no solicitaste este enlace, puedes ignorar este correo de forma segura.<br>
+                El enlace expirará automáticamente en 1 hora.<br><br>
+                
+                <strong>¿Necesitas ayuda?</strong><br>
+                WhatsApp: +52 9514563572 | www.nexypass.site
+            </div>
+        </div>
+    </div>
+</body>
+</html>
