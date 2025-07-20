@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifica tu cuenta - NexyPass</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+        .tagline {
+            font-size: 16px;
+            opacity: 0.9;
+            margin: 0;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .welcome-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .welcome-text {
+            font-size: 16px;
+            color: #4a5568;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .cta-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: transform 0.2s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        .benefits {
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        .benefits-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 15px;
+            color: #4a5568;
+        }
+        .benefit-icon {
+            font-size: 20px;
+            margin-right: 12px;
+            width: 24px;
+        }
+        .fallback-link {
+            background: #edf2f7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .fallback-text {
+            font-size: 14px;
+            color: #718096;
+            margin-bottom: 10px;
+        }
+        .fallback-url {
+            font-size: 12px;
+            color: #4a5568;
+            word-break: break-all;
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+        }
+        .footer {
+            background: #2d3748;
+            color: #a0aec0;
+            padding: 30px;
+            text-align: center;
+        }
+        .footer-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        .footer-text {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .social-links {
+            margin: 20px 0;
+        }
+        .social-link {
+            display: inline-block;
+            margin: 0 10px;
+            color: #a0aec0;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .disclaimer {
+            font-size: 12px;
+            color: #718096;
+            margin-top: 20px;
+            line-height: 1.4;
+        }
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                margin: 10px;
+                border-radius: 12px;
+            }
+            .header, .content, .footer {
+                padding: 30px 20px;
+            }
+            .logo {
+                font-size: 28px;
+            }
+            .welcome-title {
+                font-size: 22px;
+            }
+            .cta-button {
+                padding: 14px 28px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">NexyPass</div>
+            <p class="tagline">Tu Universo Digital, Simplificado</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <h1 class="welcome-title">¡Bienvenido a NexyPass! 🚀</h1>
+            
+            <p class="welcome-text">
+                Gracias por unirte a nuestra comunidad digital. Estás a un paso de acceder a un mundo de 
+                entretenimiento premium, descuentos exclusivos y experiencias únicas.
+            </p>
+
+            <!-- CTA Button -->
+            <div class="cta-container">
+                <a href="{{ .ConfirmationURL }}" class="cta-button">
+                    ✨ Verificar mi Cuenta
+                </a>
+            </div>
+
+            <!-- Benefits Section -->
+            <div class="benefits">
+                <h2 class="benefits-title">🎁 Lo que te espera en NexyPass:</h2>
+                
+                <div class="benefit-item">
+                    <span class="benefit-icon">🎯</span>
+                    <span>Acceso a nuestra ruleta de premios con giros cada 2 horas</span>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-icon">💰</span>
+                    <span>Descuentos exclusivos de hasta S/1.00 en tus compras</span>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-icon">🌟</span>
+                    <span>Perfiles premium gratuitos de Crunchyroll y más plataformas</span>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-icon">⚡</span>
+                    <span>Activación instantánea de todos tus servicios digitales</span>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-icon">🛡️</span>
+                    <span>Soporte técnico 24/7 para resolver cualquier duda</span>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-icon">📱</span>
+                    <span>Acceso a más de 15 plataformas de streaming y herramientas</span>
+                </div>
+            </div>
+
+            <!-- Fallback Link -->
+            <div class="fallback-link">
+                <p class="fallback-text">
+                    <strong>¿El botón no funciona?</strong><br>
+                    Copia y pega este enlace en tu navegador:
+                </p>
+                <div class="fallback-url">{{ .ConfirmationURL }}</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-title">NexyPass</div>
+            <p class="footer-text">
+                Tu compañero digital para acceder a lo mejor en streaming, música y herramientas premium.
+            </p>
+            
+            <div class="social-links">
+                <a href="https://www.tiktok.com/@nexypass" class="social-link">📱 TikTok</a>
+                <a href="https://www.instagram.com/nexypass" class="social-link">📷 Instagram</a>
+                <a href="https://www.nexypass.site" class="social-link">🌐 Sitio Web</a>
+            </div>
+            
+            <div class="disclaimer">
+                Si no solicitaste esta verificación, puedes ignorar este correo de forma segura.<br>
+                Este enlace de verificación expirará en 24 horas por motivos de seguridad.<br><br>
+                
+                <strong>¿Necesitas ayuda?</strong><br>
+                Contáctanos por WhatsApp: +52 9514563572<br>
+                Estamos disponibles 24/7 para asistirte.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
